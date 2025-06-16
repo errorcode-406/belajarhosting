@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>What I Learned In College</title>
+</head>
+<body>
+
+<script type="text/javascript">
+// Tampilkan alert awal
+alert("What I Learned In College...");
+
+// Minta input dari user
+var subject = prompt("Masukkan topik yang ingin kamu pelajari (misalnya: Humility, Economics, Literature, dll):");
+
+// Buat isi pesan sesuai topik
+var message;
+
+switch (subject) {
+  case "Deep Thoughts":
+    message = "On Deep thoughts : A day without sunshine is like night.";
+    break;
+  case "Problem Solving":
+    message = "On Problem Solving : When the only tool you own is a hammer, every problem begins to resemble a nail. - Abraham Maslow";
+    break;
+  case "Materialism":
+    message = "On Materialism : He who dies with the most toys, is, nonetheless, still dead.";
+    break;
+  case "Infinity":
+    message = "On Infinity : If you had everything, where would you keep it?";
+    break;
+  case "Economics":
+    message = "On Economics : The cost of living hasn't affected its popularity.";
+    break;
+  case "Revisionist History":
+    message = "On Revisionist History : What was sliced bread the greatest thing since?";
+    break;
+  case "Literature":
+    message = "On Literature : This is not a novel to be tossed aside lightly. It should be thrown with great force. - Dorothy Parker";
+    break;
+  case "Humility":
+    message = "On Humility : To err is human, to moo bovine.";
+    break;
+  case "Excuses":
+    message = "On Excuses : I can't complain, but sometimes I still do. - Joe Walsh";
+    break;
+  case "Numbers":
+    message = "On Numbers : 2 is not equal to 3 - not even for very large values of 2.";
+    break;
+  default:
+    message = "I learnt nothing in college.";
+}
+
+// Tampilkan hasil dalam alert dan di halaman
+alert(message);
+document.write("<p><strong>Hasil:</strong> " + message + "</p>");
+</script>
+
+</body>
+</html>
