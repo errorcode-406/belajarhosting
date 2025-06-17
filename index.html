@@ -53,28 +53,28 @@
       text-align: center;
       font-size: 18px;
       color: green;
+      display: none;
     }
   </style>
 </head>
 <body>
   <div class="login-box" id="loginBox">
     <h2>Login SIMRS</h2>
-    <form onsubmit="return loginSimulasi(event)">
+    <div id="loginForm">
       <input type="text" id="username" placeholder="Username" required />
       <input type="password" id="password" placeholder="Password" required />
-      <button type="submit">Masuk</button>
-    </form>
+      <button onclick="loginSimulasi()">Masuk</button>
+    </div>
     <div class="note">Simulasi login statis, tanpa database</div>
   </div>
 
-  <div class="success-message" id="successMessage" style="display: none;">
+  <div class="success-message" id="successMessage">
     <h2>Login Berhasil!</h2>
     <p>Selamat datang di SIMRS.</p>
   </div>
 
   <script>
-    function loginSimulasi(e) {
-      e.preventDefault();
+    function loginSimulasi() {
       const user = document.getElementById("username").value;
       const pass = document.getElementById("password").value;
 
