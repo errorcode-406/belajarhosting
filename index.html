@@ -49,10 +49,15 @@
       text-align: center;
       margin-top: 10px;
     }
+    .success-message {
+      text-align: center;
+      font-size: 18px;
+      color: green;
+    }
   </style>
 </head>
 <body>
-  <div class="login-box">
+  <div class="login-box" id="loginBox">
     <h2>Login SIMRS</h2>
     <form onsubmit="return loginSimulasi(event)">
       <input type="text" id="username" placeholder="Username" required />
@@ -62,17 +67,20 @@
     <div class="note">Simulasi login statis, tanpa database</div>
   </div>
 
+  <div class="success-message" id="successMessage" style="display: none;">
+    <h2>Login Berhasil!</h2>
+    <p>Selamat datang di SIMRS.</p>
+  </div>
+
   <script>
     function loginSimulasi(e) {
-      e.preventDefault(); // mencegah submit form reload
-
+      e.preventDefault();
       const user = document.getElementById("username").value;
       const pass = document.getElementById("password").value;
 
-      // Login statis: username = admin, password = 1234
       if (user === "admin" && pass === "1234") {
-        // Redirect ke halaman lain (bisa file dashboard.html)
-        window.location.href = "dashboard.html";
+        document.getElementById("loginBox").style.display = "none";
+        document.getElementById("successMessage").style.display = "block";
       } else {
         alert("Username atau password salah!");
       }
